@@ -1,26 +1,16 @@
-# reactBoilerplate
-
-A barebones repo to get you started with Webpack, Babel, and React. 
-
-## Installation
-
-`git clone https://github.com/kmeraz/reactBoilerplate`
-
-then
+# Website Storage
 
 `npm install`
 
-## Serve your files on a webpack server (with hotloading!)
+## Set up database
 
-`npm start`
+# You must have mysql installed 
+(`brew install mysql`);
+
+`npm init`
 
 Then go to localhost:8080.
 
-## Process and bundle your files
+## API Enpoints
 
-`webpack`
-
-## Re-process and re-bundle your files whenever you make a change
-
-`webpack --watch`
 
