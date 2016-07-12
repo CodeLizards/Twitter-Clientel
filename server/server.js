@@ -25,7 +25,7 @@ app.post('/newWebsite', function (req, res) {
 });
 
 // START SERVER
-app.listen(port, function(err){
+app.listen(port, function (err) {
   if(err){
     return console.log('server cannot connect', err);
   }
