@@ -4,16 +4,6 @@
 
 ## Run locally
 
-
-### Set up database
-
-#### You must have mysql installed 
-(`brew install mysql`);
-
-`npm init`
-
-### Run 
-
 `npm install`
 `npm start`
 
@@ -26,7 +16,6 @@ Navigate to go to localhost:8080.
 ## Tech Stack
 - React
 - Node/Express
-- MySql
 - Webpack
 - Mocha
 
@@ -35,6 +24,5 @@ There are two API endpoints that recieve websites and return list of all valid w
 
 | API Endpoint        | Type        | Description
 | :------------- |:-------- |:-------- 
-| /newWebsite      | POST | Expects an object with a key, "name" and a url, "description" and its description {name: google.com, description: "searching website"} Expects url to be in format name.domain with no www etc to retrieve valid results. 
-| /allValidWebsites/| GET | Returns a JSON object with keys, "name", "description","time_posted", , containing the url requested, the description, and the time it was posted |  
+| /newWebsite/:query   | GET | Expects a query as a param, returns json object of resulting tweets
 
