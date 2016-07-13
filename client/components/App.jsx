@@ -1,6 +1,4 @@
 import React from 'react';
-import NewWebsite from './components/newWebsite.jsx';
-import AllWebsites from './components/allWebsites.jsx';
 
 class App extends React.Component {
 
@@ -13,9 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Website Archives</h1>
-        <NewWebsite />
-        <AllWebsites />
+        <h1>Twitter Client</h1>
       </div>
     )
   }
