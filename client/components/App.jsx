@@ -13,7 +13,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Twitter Client</h1>
-        <h3> Search for anything in the twittesphere... you know you want to.</h3>
+        <h3> Search for anything in the twittersphere... you know you want to.</h3>
         <SearchTweets />
       </div>
     );

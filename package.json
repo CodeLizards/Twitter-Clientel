@@ -4,7 +4,7 @@
   "description": "Boilerplate repo for React/Webpack/Babel app",
   "main": "./client/index.html",
   "scripts": {
-    "test": "mocha tests/server.tests.js",
+    "test": "mocha tests/server/server.tests.js tests/server/authentication.tests.js tests/client/searchTweets.tests.js",
     "start": "node server/server.js & webpack --watch",
     "init": "mysql -u root < server/schema.sql",
     "dev-start": "webpack-dev-server --inline --hot --content-base client/"
