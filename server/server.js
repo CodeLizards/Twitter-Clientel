@@ -1,11 +1,11 @@
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8080;
-var controller = require('./controllers/tweetController.js');
-var authentication = require('./lib/authentication.js');
-var cron = require('cron');
-var token; 
-var authCallback = function (error, response, body) {
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8080;
+const controller = require('./controllers/tweetController.js');
+const authentication = require('./lib/authentication.js');
+const cron = require('cron');
+const token = null;
+const authCallback = (error, response, body) => {
   if (error) {
     console.log(error, 'error');
   } else {
@@ -13,14 +13,13 @@ var authCallback = function (error, response, body) {
   }
 };
 // update token every 15 minute so it doesnt expire.
-var cronJob = cron.job('* */15 * * * *', function () {
+const cronJob = cron.job('* */15 * * * *', () => {
   authentication.getAccessToken(authCallback);
 });
 
 cronJob.start();
 
-authentication.getAccessToken(authCallback);
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 
 // SERVE UP CLIENT FILES
 app.use(express.static(__dirname + '/../client/'));
@@ -31,13 +30,13 @@ app.use(bodyParser.json());
 
 
 // ENDPOINTS
-app.get('/searchTweets/:q', function (req, res) {
+app.get('/searchTweets/:q', (req, res) => {
   controller.searchTweets.get(req, res, token);
 });
 
 // START SERVER
-app.listen(port, function (err) {
-  if(err){
+app.listen(port, (err) => {
+  if (err) {
     return console.log('server cannot connect', err);
   }
   console.log('App is listening on port 8080');
