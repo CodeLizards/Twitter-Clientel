@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 exports.searchTweets = (query, callback) => {
-  const url = `http://localhost:8080/searchTweets/${query}`;
+  const q = encodeURIComponent(query);
+  const url = `http://localhost:8080/searchTweets/${q}`;
   return axios({
     url,
     timeout: 20000,

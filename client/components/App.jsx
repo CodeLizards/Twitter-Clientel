@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchTweets from './SearchTweets.jsx';
 
 class App extends React.Component {
 
@@ -12,8 +13,10 @@ class App extends React.Component {
     return (
       <div>
         <h1>Twitter Client</h1>
+        <h3> Search for anything in the twittesphere... you know you want to.</h3>
+        <SearchTweets />
       </div>
-    )
+    );
   }
 
 }
